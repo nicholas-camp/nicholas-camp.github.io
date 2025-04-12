@@ -13,18 +13,18 @@ const Home = () => (
         <h1 className="text-5xl font-bold">Hi, I’m Nick 👋</h1>
 
         {/* Subtle status */}
-        <div className="flex items-center gap-2 text-lg text-gray-500 dark:text-gray-400">
+        <div className="flex items-center gap-2 text-lg">
             <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
             <span>Available for freelance</span>
         </div>
 
         {/* Subtitle */}
-        <p className="text-xl max-w-xl text-gray-600 dark:text-gray-400">
+        <p className="text-xl max-w-xl">
             Welcome to my portfolio — developer, designer, and dreamer.
         </p>
 
         {/* Short Bio */}
-        <p className="text-md max-w-xl text-gray-500 dark:text-gray-400">
+        <p className="text-md max-w-xl">
             I love building clean, performant web apps and exploring new technologies. Currently focused on React, TypeScript, and UI design.
         </p>
 
@@ -62,10 +62,10 @@ const Home = () => (
 
         {/* Contact Me Section */}
         <div className="mt-4 space-y-1">
-            <p className="text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-xl">
                 Interested in working together? Feel free to reach out!
             </p>
-            <p className="text-lg text-gray-500 dark:text-gray-400">
+            <p className="text-lg">
                 Email: <a href="mailto:someone@example.com" className="text-blue-500 dark:text-blue-400">someone@example.com</a>
             </p>
         </div>

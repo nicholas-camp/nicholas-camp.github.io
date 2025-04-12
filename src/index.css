@@ -30,7 +30,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
+  color: var(--text-color); /* 👈 Add this */
+  background-color: var(--bg-color); /* 👈 Also make sure this is here */
 }
+
 
 h1 {
   font-size: 3.2em;
