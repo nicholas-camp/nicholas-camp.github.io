@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="w-screen h-screen flex flex-col">
             <Header />
-            <main className="flex-1">
+            <main className="flex-1 overflow-y-auto">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />

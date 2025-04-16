@@ -1,5 +1,5 @@
 const About = () => (
-    <div className="min-h-screen w-full flex flex-col items-center px-6 py-20 gap-16">
+    <div className="w-full h-full flex flex-col items-center px-6 py-20 gap-16">
         {/* Heading */}
         <div className="text-center">
             <h1 className="text-5xl font-bold tracking-tight mb-3">About Me</h1>
