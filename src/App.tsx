@@ -4,13 +4,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Posts from './pages/Posts';
-import PostPage from "./pages/PostPage"; // No need to include the `.tsx` extension
+import PostPage from "./pages/PostPage";
+import Footer from "./components/Footer.tsx"; // No need to include the `.tsx` extension
 
 function App() {
     return (
-        <div className="w-screen h-screen flex flex-col">
+        <div className="w-screen min-h-screen flex flex-col">
             <Header />
-            <main className="flex-1 overflow-y-auto">
+            <main className="flex-1 overflow-y-auto"> {/* Ensure it can scroll when needed */}
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -18,7 +19,9 @@ function App() {
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/posts/:url" element={<PostPage />} />
                 </Routes>
+
             </main>
+            <Footer />
         </div>
     );
 }

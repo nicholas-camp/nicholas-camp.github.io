@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 :root {
   /* Typography */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -16,39 +16,19 @@
   /* Light Mode Colors */
   --bg-color: #ffffff;
   --text-color: #213547;
-  --link-color: #111827;
-  --hover-bg: rgba(0, 0, 0, 0.1);
-
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  /* Remove global link color to prevent overrides */
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  overflow: hidden;
-  color: var(--text-color); /* 👈 Add this */
-  background-color: var(--bg-color); /* 👈 Also make sure this is here */
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
-
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-/* Light Mode Link Styles */
-a {
-  color: var(--link-color);
-}
-
-a:hover {
-  color: #4b5563; /* Tailwind's gray-600 */
-}
-
 
 /* Light mode button hover */
 button:hover {
@@ -57,21 +37,11 @@ button:hover {
 
 /* Dark Mode Overrides */
 html.dark {
-  --bg-color: #111111;
-  --text-color: #f3f4f6;
-  --link-color: #f3f4f6;  /* Updated to white */
-  --hover-bg: rgba(255, 255, 255, 0.1);
-
+  --bg-color: #22262e;
+  --text-color: #e4e4e7;
+  --hover-bg: rgba(255, 255, 255, 0.05);
   background-color: var(--bg-color);
   color: var(--text-color);
-}
-
-html.dark a {
-  color: var(--link-color);
-}
-
-html.dark a:hover {
-  color: #d1d5db;
 }
 
 html.dark button {
