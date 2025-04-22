@@ -1,5 +1,8 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Typography */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -16,7 +19,6 @@
   /* Light Mode Colors */
   --bg-color: #ffffff;
   --text-color: #213547;
-  --hover-bg: rgba(0, 0, 0, 0.04);
   /* Remove global link color to prevent overrides */
 }
 
@@ -30,24 +32,8 @@ body {
   background-color: var(--bg-color);
 }
 
-/* Light mode button hover */
-button:hover {
-  background-color: var(--hover-bg);
-}
-
 /* Dark Mode Overrides */
 html.dark {
   --bg-color: #22262e;
   --text-color: #e4e4e7;
-  --hover-bg: rgba(255, 255, 255, 0.05);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-html.dark button {
-  color: #f9f9f9;
-}
-
-html.dark button:hover {
-  background-color: var(--hover-bg);
 }

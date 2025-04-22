@@ -35,7 +35,7 @@ const Header = () => {
 
     return (
         <header
-            className="w-full flex justify-between items-center px-6 py-3 transition-all"
+            className="w-full flex justify-between items-center px-6 py-3"
             style={{ backgroundColor: 'var(--bg-color)' }}
         >
             <nav className="flex gap-4 text-lg">

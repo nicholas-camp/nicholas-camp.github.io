@@ -9,9 +9,9 @@ import Footer from "./components/Footer.tsx"; // No need to include the `.tsx` e
 
 function App() {
     return (
-        <div className="w-screen min-h-screen flex flex-col">
+        <div className="w-screen min-h-screen flex flex-col transition-colors duration-300 ">
             <Header />
-            <main className="flex-1 overflow-y-auto"> {/* Ensure it can scroll when needed */}
+            <main className="flex-1 overflow-y-auto">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -19,11 +19,11 @@ function App() {
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/posts/:url" element={<PostPage />} />
                 </Routes>
-
             </main>
             <Footer />
         </div>
     );
 }
+
 
 export default App;
