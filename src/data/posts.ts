@@ -1,13 +1,13 @@
-import HelloFromReact from "../components/HelloFromReact";
+import Welcome from "../posts/Welcome.tsx";
 
 const posts = [
     {
         name: "Welcome to my portfolio",
-        url: "hello-from-react",
-        date: "2025-04-15",
-        content: "This is the first post on my portfolio! I’ll be sharing updates on projects I’m building, ideas I’m exploring, and anything else I find interesting. ",
-        component: HelloFromReact,
-    }
+        date: "2025-04-25",
+        description: "This is the first post on my portfolio! I’ll be sharing updates on projects I’m building, ideas I’m exploring, and anything else I find interesting.",
+        url: "welcome",
+        post: Welcome,
+    },
 ];
 
 export default posts;

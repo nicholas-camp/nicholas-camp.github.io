@@ -1,27 +1,23 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import profileImg from "../assets/profile.jpg";
 
 const Home = () => (
-    <div className="w-full h-full flex flex-col items-center justify-center text-center px-10 pt-25 pb-6">
-        {/* Everything that should have vertical spacing */}
-        <div className="flex flex-col items-center space-y-5">
-            {/* Profile Picture */}
+    <div className="w-full h-full flex flex-col items-center justify-center text-center px-10 pt-24 pb-6">
+        <div className="flex flex-col items-center space-y-6">
             <img
-                src="https://placehold.co/128"
+                src={profileImg}
                 alt="Profile"
-                className="w-48 h-48 rounded-full object-cover shadow-md"
+                className="w-48 h-48 rounded-full object-cover"
             />
 
-            {/* Heading */}
             <h1 className="text-5xl font-bold">Hi, I’m Nick 👋</h1>
 
-            {/* Status */}
-            <div className="flex items-center gap-3 text-xl">
-                <span className="h-2 w-2 rounded-full bg-green-500" />
+            <div className="flex items-center gap-3 text-2xl">
+                <span className="h-3 w-3 rounded-full bg-green-500" />
                 <span>Available for hire</span>
             </div>
 
-            {/* Bio Section with Prose */}
-            <div className="prose prose-lg dark:prose-invert max-w-4xl transition-colors duration-300">
+            <div className="prose prose-xl dark:prose-invert max-w-4xl transition-colors duration-300">
                 <p>
                     I’m a Computer Science graduate with a passion for building, learning, and solving problems.
                 </p>
@@ -31,8 +27,7 @@ const Home = () => (
             </div>
         </div>
 
-        {/* Contact Info (custom spacing, no prose) */}
-        <div className="mt-6 text-lg text-gray-800 dark:text-gray-200 space-y-2 transition-colors duration-300">
+        <div className="mt-6 text-xl space-y-3">
             <p>
                 <strong>Let’s connect</strong> — I’d love to hear from you.
             </p>
@@ -51,18 +46,18 @@ const Home = () => (
                     href="https://linkedin.com/in/nicholas-j-camp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-gray-400 inline-flex items-center gap-1 transition-colors duration-300 no-underline"
+                    className="hover:text-black dark:hover:text-gray-400 inline-flex items-center gap-1 transition-colors duration-300 no-underline"
                 >
-                    <FaLinkedin size={22} />
+                    <FaLinkedin size={24} />
                     LinkedIn
                 </a>
                 <a
                     href="https://github.com/nicholas-camp"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-gray-400 inline-flex items-center gap-1 transition-colors duration-300 no-underline"
+                    className="hover:text-black dark:hover:text-gray-400 inline-flex items-center gap-1 transition-colors duration-300 no-underline"
                 >
-                    <FaGithub size={22} />
+                    <FaGithub size={24} />
                     GitHub
                 </a>
             </div>

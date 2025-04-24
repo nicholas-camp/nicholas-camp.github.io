@@ -1,21 +1,21 @@
 type ProjectProps = {
     name: string;
-    github: string;
-    description: string;
     tags: string[];
+    description: string;
+    github: string;
 };
 
-const Project = ({ name, github, description, tags }: ProjectProps) => {
+const ProjectCard = ({ name, tags, description, github }: ProjectProps) => {
     return (
         <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full max-w-4xl p-5 mb-5 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+            className="w-full max-w-4xl p-6 mb-6 rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
         >
-            <h2 className="text-3xl font-semibold mb-5">{name}</h2>
+            <h2 className="text-3xl font-semibold mb-4">{name}</h2>
 
-            <div className="flex flex-wrap gap-2 mb-5">
+            <div className="flex flex-wrap gap-2 mb-4">
                 {tags.map((tag) => (
                     <span
                         key={tag}
@@ -26,7 +26,7 @@ const Project = ({ name, github, description, tags }: ProjectProps) => {
                 ))}
             </div>
 
-            <p className="mb-5 text-gray-700 dark:text-gray-300 transition-colors duration-300">{description}</p>
+            <p className="mb-6">{description}</p>
 
             <span className="text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors duration-300">
                 View on GitHub
@@ -35,4 +35,4 @@ const Project = ({ name, github, description, tags }: ProjectProps) => {
     );
 };
 
-export default Project;
+export default ProjectCard;

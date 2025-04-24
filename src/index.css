@@ -4,7 +4,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Typography */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -13,13 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Color Scheme */
   color-scheme: light dark;
-
-  /* Light Mode Colors */
   --bg-color: #ffffff;
   --text-color: #213547;
-  /* Remove global link color to prevent overrides */
 }
 
 body {
@@ -32,7 +27,6 @@ body {
   background-color: var(--bg-color);
 }
 
-/* Dark Mode Overrides */
 html.dark {
   --bg-color: #22262e;
   --text-color: #e4e4e7;
